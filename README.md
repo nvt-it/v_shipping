@@ -80,6 +80,9 @@ Ahamove Feature
 |  Create new Order               |  create_order             |
 |  Get list orders                |  retrieved_orders         |
 |  Get detail order               |  retrieved_order          |
+|  Get fee order                  |  retrieved_fee            |
+|  Get fee multiple order         |  retrieved_fees           |
+|  Cancel order                   |  cancel_order             |
 |  Get detail city                |  retrieved_city           |
 |  Get list services              |  retrieved_services       |
 |  Get share tracking order link  |  retrieved_tracking_link  |

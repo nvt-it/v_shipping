@@ -31,6 +31,18 @@ module VShipping
       get('order_endpoint', params)
     end
 
+    def retrieved_fee(params)
+      get('order_fee_endpoint', params)
+    end
+
+    def retrieved_fees(body)
+      post('orders_fee_endpoint', body)
+    end
+
+    def cancel_order(params)
+      get('cancel_order_endpoint', params)
+    end
+
     def retrieved_city(params)
       get('city_endpoint', params)
     end
@@ -86,6 +98,20 @@ module VShipping
       response = self.class.get(
         mapping_url(endpoint),
         { query: params }
+      )
+
+      formmated(response)
+    end
+
+    def post(endpoint, body)
+      response = self.class.post(
+        mapping_url(endpoint),
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+          body: body
+        }
       )
 
       formmated(response)

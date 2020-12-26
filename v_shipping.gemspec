@@ -4,7 +4,7 @@ $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = 'v_shipping'
-  s.version     = '0.0.1'
+  s.version     = '0.0.1-rc'
   s.date        = '2020-12-24'
   s.summary     = "VN Shipping!"
   s.description = "VN Shipping Gem"
