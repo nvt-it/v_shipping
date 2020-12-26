@@ -63,15 +63,18 @@ Create ahamove config path then copy to configuration, please using [Ahamove doc
 ```
 # config/ahamove-config.yaml
 
-base_api_url: # Base api url
-register_endpoint: # Endpoint for register to retrieved token
-create_order_endpoint: # Create new order endpoint
-orders_endpoint: # List order endpoint
-order_endpoint: # Order detail endpoint
-city_endpoint: # City detail endpoint
-services_endpoint: # List services endpoint
-order_tracking_endpoint: # Order tracking share endpoint
-notify_order_endpoint: # Notify to supplier endpoint
+base_api_url: <%= ENV['AHAMOVE_BASE_API'] %>
+register_endpoint: /v1/partner/register_account
+create_order_endpoint: /v1/order/create
+order_fee_endpoint: /v1/order/estimated_fee
+orders_fee_endpoint: /v2/order/estimated_fee
+orders_endpoint: /v1/order/list
+order_endpoint: /v1/order/detail
+cancel_order_endpoint: /v1/order/cancel
+city_endpoint: /v1/order/city_detail
+services_endpoint: /v1/order/service_types
+order_tracking_endpoint: /v1/order/shared_link
+notify_supplier_endpoint: /v1/order/notify_order
 ```
 Ahamove Feature
 | Feature                         |  Method                   |
