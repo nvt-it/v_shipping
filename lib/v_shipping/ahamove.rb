@@ -85,7 +85,7 @@ module VShipping
     def load_yaml(url)
       YAML::load(
         ERB.new(
-          File.read(config_url)
+          File.read(url)
         ).result
       )
     end
